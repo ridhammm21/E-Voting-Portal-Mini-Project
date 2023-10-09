@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Voting Portal</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="brand">E-Voting</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#homelink">Home</a>
+                <a href="#aboutlink">About</a>
+                <a href="/Portal/index.html">Portal</a>
+                <a href="#">Gallery</a>
+                <a href="#contactlink">Contact us</a>
+            </div>
+        </div> 
+    </header>
+
+    <section class="home" id="homelink">
+        <video class="video-slide active" src="img/1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="img/2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="img/3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="img/4.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>E-Voting<br><span>Portal</span></h1>
+            <p>Electronic voting (e-voting) offers convenience, accessibility, and faster results, reducing costs and errors while enhancing security and transparency. It enables remote voting and can benefit expatriates, but it must be implemented with a focus on security, privacy, and legal compliance.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Transparency</h1>
+            <p>Leveraging blockchain technology for the e-voting project enhances transparency. Every vote and transaction is recorded in a tamper-resistant, publicly accessible ledger. This ensures that the voting process is transparent and auditable, strengthening trust in the electoral system.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Security</h1>
+            <p>Security is paramount in e-voting systems. Robust measures are vital to prevent hacking, tampering, and identity theft. End-to-end encryption, blockchain technology, and secure authentication protocols are key components to ensure the integrity and privacy of the voting process.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Environmental<br><span>Sustainability</span></h1>
+            <p>E-voting contributes to sustainability by reducing paper usage, minimizing carbon footprints, and encouraging energy-efficient practices. Remote voting and digital records further lessen environmental impact while promoting green technology adoption.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <section class="about" id="aboutlink">
+        <h1>About us</h1>
+        <p>Welcome to our college's E-Voting Portal, where we merge technology and democracy to empower our student body and foster a culture of active participation. Our E-Voting Portal is designed to enhance the democratic experience within our college community, making it easier for students to engage in the decision-making process, no matter where they are.</p>
+    </section>
+
+    <section class="contact" id="contactlink">
+        <h1>Contact us</h1>
+    </section>
+
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        menuBtn.addEventListener("click",()=>{
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var slideNav = function(manual)
+        {
+            btns.forEach((btn)=>{
+                btn.classList.remove("active");
+            });
+            slides.forEach((slide)=>{
+                slide.classList.remove("active");
+            });
+            contents.forEach((content)=>{
+                content.classList.remove("active");
+            });
+            btns[manual].classList.add("active");   
+            slides[manual].classList.add("active");   
+            contents[manual].classList.add("active");   
+        }
+        btns.forEach((btn,i)=>{
+            btn.addEventListener("click",()=>{
+                slideNav(i);
+            });
+        });
+
+    </script>
+    
+</body>
+</html>
