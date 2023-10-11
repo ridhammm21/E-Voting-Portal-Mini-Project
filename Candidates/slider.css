@@ -191,21 +191,13 @@ body{
   background-color: #4070F4;
 }
 
-.card-content a
-{
-  color: #FFF;
-  text-decoration: none;
-}
-.card-content a:visited
-{
-  color: #FFF;
-  text-decoration: none;
-}
 
 section h1{
   color: #265DF2;
   padding-left: 30px;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .slide-content{
